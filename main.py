@@ -2,7 +2,7 @@
     Author : Neel Vora
     Email: nxv8988@mavs.uta.edu
 '''
-from Rabin_Krap import Rabin_Karp as RK
+from Rabin_Karp import Rabin_Karp as RK
 from Knuth_Morris import Knuth_Morris as KM
 import timeit
 import matplotlib.pyplot as plt
@@ -32,7 +32,7 @@ if __name__=='__main__':
 
     
     for i in range(len(input)):
-        print("Output from Rabin-Krap algorithm",end="\n")
+        print("Output from Rabin-Karp algorithm",end="\n")
         timein=timeit.default_timer()
         RK.search(pattern[i],input[i],prime_number)
         timeout=timeit.default_timer()
@@ -45,10 +45,10 @@ if __name__=='__main__':
         time2.append(timeout-timein)
 
     
-    plt.plot(x,time1, color='blue', marker='o', markerfacecolor='red', markersize=9, label="Rabin-Krap")
+    plt.plot(x,time1, color='blue', marker='o', markerfacecolor='red', markersize=9, label="Rabin-Karp")
     plt.ylabel('Running time')
     plt.xlabel('Length of string')   
-    plt.title('Rabin-Krap') 
+    plt.title('Rabin-Karp') 
     plt.xticks(ticks=x,rotation=90)
     plt.show()
     
@@ -59,11 +59,11 @@ if __name__=='__main__':
     plt.xticks(ticks=x,rotation=90)   
     plt.show()
 
-    plt.plot(x,time1, color='blue', marker='o', markerfacecolor='red', markersize=9, label="Rabin-Krap")
+    plt.plot(x,time1, color='blue', marker='o', markerfacecolor='red', markersize=9, label="Rabin-Karp")
     plt.plot(x,time2, color='black', marker='o', markerfacecolor='orange', markersize=9, label="Knuth-Morris")
     plt.ylabel('Running time')
     plt.xlabel('Length of string')   
-    plt.title('Rabin-Krap VS Knuth-Morris') 
+    plt.title('Rabin-Karp VS Knuth-Morris') 
     plt.xticks(ticks=x,rotation=90)
     plt.legend()    
     plt.show()
